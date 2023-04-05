@@ -13,7 +13,7 @@
         window.addEventListener("load", (event) => {
             document.getElementById(`loaded`).textContent = `loaded.`
             console.log(`Sending a message....`)
-            postMessage("Hello from another dimension", "*");
+            window.parent.postMessage("Hello from another dimension", "*");
         })
     </script>
 </body>
