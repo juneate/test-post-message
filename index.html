@@ -8,12 +8,11 @@
 </head>
 <body>
     <h1>Test postMessage()</h1>
-    <p id="loaded"></p>
+    <button id="send">Send a message</button>
     <script>
-        window.addEventListener("load", (event) => {
-            document.getElementById(`loaded`).textContent = `loaded.`
+        document.getElementById(`send`).addEventListener(`click`, (event) => {
             console.log(`Sending a message....`)
-            window.parent.postMessage("Hello from another dimension", "*");
+            window.parent.postMessage(`Hello from another dimension`, `*`);
         })
     </script>
 </body>
