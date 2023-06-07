@@ -10,6 +10,7 @@
     <h1>Test postMessage()</h1>
     <button id="send">Send a message</button>
     <script>
+        console.log(window.parent.location.origin)
         document.getElementById(`send`).addEventListener(`click`, (event) => {
             console.log(`Sending a message....`)
             window.parent.postMessage(`Hello from another dimension`, `*`);
